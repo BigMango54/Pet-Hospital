@@ -3,7 +3,7 @@ CREATE TABLE `doctor`(
     `d_no` int NOT NULL,
     `d_name` varchar(20) NOT NULL,
     `d_sex` varchar(6) NOT NULL,
-    `d_phone` int NOT NULL,
+    `d_phone` char(10) NOT NULL,
     PRIMARY KEY(d_no)
     );
 
@@ -28,7 +28,7 @@ CREATE TABLE `prescription`(
 CREATE TABLE `host`(
     `h_name` varchar(20) NOT NULL,
     `h_id` int NOT NULL,
-    `h_phone` int NOT NULL,
+    `h_phone` char(10) NOT NULL,
     `h_address` varchar(50) NOT NULL,
     `pet_name` varchar(20) NOT NULL,
     `pet_breed` varchar(50) NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE `hosptial_employee`(
     `e_no` int NOT NULL,
     `e_name` varchar(20) NOT NULL,
     `responsible` varchar(50) NOT NULL,
-    `e_phone` int NOT NULL,
+    `e_phone` char(10) NOT NULL,
     PRIMARY KEY(e_no)
 );
 
