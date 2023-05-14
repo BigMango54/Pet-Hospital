@@ -46,7 +46,7 @@ CREATE TABLE `registered`(
     `h_id` int NOT NULL,
     `dept` varchar(50) NOT NULL,
     `e_no` int NOT NULL,
-    `reg_no` int(50) NOT NULL,
+    `reg_no` int NOT NULL,
     PRIMARY KEY(d_no)
 );
 
