@@ -1,6 +1,6 @@
 CREATE TABLE `doctor`(
     `dept` varchar(50) NOT NULL,
-    `d_no` int NOT NULL,
+    `d_no` varchar(10) NOT NULL,
     `d_name` varchar(20) NOT NULL,
     `d_sex` varchar(6) NOT NULL,
     `d_phone` char(10) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `prescription`(
     `h_name` varchar(20) NOT NULL,
     `pet_name` varchar(20) NOT NULL,
     `pre_no` int NOT NULL,
-    `d_no` int NOT NULL,
+    `d_no` varchar(10) NOT NULL,
     `d_name` varchar(20) NOT NULL,
     `symptom` varchar(50) NOT NULL,
     `drug_name` varchar(50) NOT NULL,
@@ -42,29 +42,29 @@ CREATE TABLE `host`(
 
 CREATE TABLE `registered`(
     `reg_no` int NOT NULL,
-    `d_no` int NOT NULL,
+    `d_no` varchar(10) NOT NULL,
     `d_name` varchar(20) NOT NULL,
     `dept` varchar(50) NOT NULL,
     `h_id` int NOT NULL,
     `pet_name` varchar(20) NOT NULL,
     `time` varchar(50) NOT NULL,
-    `e_no` int NOT NULL,
+    `e_no` varchar(10) NOT NULL,
     PRIMARY KEY(d_no)
 );
 
 CREATE TABLE `clinic`(
     `dept` varchar(50) NOT NULL,
     `time` varchar(50) NOT NULL,
-    `d_no` int NOT NULL,
+    `d_no` varchar(10) NOT NULL,
     `d_name` varchar(20) NOT NULL,
     `reg_no` int NOT NULL,
     `pet_name` varchar(20) NOT NULL,
-    `e_no` int NOT NULL,
+    `e_no` varchar(10) NOT NULL,
     PRIMARY KEY(d_no)
 );
 
 CREATE TABLE `hosptial_employee`(
-    `e_no` int NOT NULL,
+    `e_no` varchar(10) NOT NULL,
     `e_name` varchar(20) NOT NULL,
     `responsible` varchar(50) NOT NULL,
     `e_phone` char(10) NOT NULL,
@@ -77,9 +77,9 @@ CREATE TABLE `space`(
     `r_name` varchar(20) NOT NULL,
     `time` varchar(50) NOT NULL,
     `status` varchar(50) NOT NULL,
-    `d_no` int,
+    `d_no` varchar(10),
     `d_name` varchar(20),
     `pet_name` varchar(20),
-    `e_no` int NOT NULL,
+    `e_no` varchar(10) NOT NULL,
     PRIMARY KEY(r_no)
 );
